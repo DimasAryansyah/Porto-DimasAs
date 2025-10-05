@@ -223,6 +223,45 @@ nav {
   flex-wrap: wrap;
 }
 
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-card img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+}
+
+.github-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover .github-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.github-icon:hover {
+  color: #00bcd4;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.5); /* buat gambar agak gelap */
+}
+
 .project-gallery img {
   width: 500px;
   height: 300px;
@@ -237,7 +276,7 @@ nav {
 
 /* 👇 ukuran khusus untuk gambar yang punya class project-large */
 .project-gallery img.project-large {
-  width: 400px;            /* misalnya lebih besar */
+  width: 400px;
   height: auto;
 }
 
